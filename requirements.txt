@@ -1,0 +1,6 @@
+openai
+streamlit
+beautifulsoup4
+requests
+pylatex
+langchain
