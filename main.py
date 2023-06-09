@@ -2,9 +2,6 @@ import streamlit as st
 from streamlit_chat import message as st_message
 import validators
 
-checkbox_selected = False
-proceed = False
-
 
 def check_inputs():
     if not create_resume and not create_coverletter and not create_interview:
@@ -31,28 +28,36 @@ def user_facing():
         st.write("Generating Interview Questions...")
 
 
-st.title("Smart Apply 📋")
-input_linkedin = st.text_input("Place Your Linkedin URL")
-input_position = st.text_input("Place the job posting page")
-github_linkedin = st.text_input("Place Your Github URL")
+    st.set_page_config(
+        page_title="Smart Apply",
+        page_icon="📋",
+    )
 
 
-st.write("what do you want to generate?")
-create_resume = st.checkbox("Create Resume")
-create_coverletter = st.checkbox("Create Cover Letter")
-create_interview =st.checkbox("Create Interview Questions")
-
-if st.button("Generate"):
-    check_inputs()
-
-
+#this is suppose to be the main function, but the variables are not being passed
+st.header("Smart Apply 📋")
+with st.sidebar:
+    st.title("Place your information:")
+    input_linkedin = st.text_input("Place Your Linkedin URL")
+    input_position = st.text_input("Place the job posting page")
+    github_linkedin = st.text_input("Place Your Github URL")
 
 
+    st.write("what do you want to generate?")
+    create_resume = st.checkbox("Create Resume")
+    create_coverletter = st.checkbox("Create Cover Letter")
+    create_interview =st.checkbox("Create Interview Questions")
 
-history = [
-   {
-       "message": "Hello, I'm a message",
-       "is_user": False
+    if st.button("Generate"):
+        check_inputs()
 
-   }
-]
+
+
+
+# history = [
+#    {
+#        "message": "Hello, I'm a message",
+#        "is_user": False
+
+#    }
+# ]
