@@ -3965,7 +3965,7 @@ for item in education_items:
     else:
       university_name = "N/A"  # or any default value you prefer
 
-    degree = item.find('span', class_='t-14').get_text(strip=True)
+    degree = item.find('span', class_='t-14').find('span', attrs={'aria-hidden': 'true'}).get_text(strip=True)
     
     # Extract date range
     date_range_element = item.find('span', class_='t-14 t-normal t-black--light')
@@ -3974,14 +3974,27 @@ for item in education_items:
     else:
       date_range = "N/A"  # or any default value you prefer
     
-    # Extract additional details
-    additional_details = item.find('div', class_='pvs-list__outer-container').get_text(strip=True)
     
+    # Extract additional details
+    details = ""
+    skills = ""
+    info = item.find('ul', class_='pvs-list').find_all('span')
+
+    for i in info:
+      found_skills = i.find('span', class_='white-space-pre')      
+      if found_skills:
+        skills = i.get_text(strip=True)
+      elif i.has_attr('class') and i['class'][0] == 'visually-hidden':
+        text = i.get_text(strip=True)
+        if details != text:
+          details = details + text + "\n"
+
     # Store the extracted information in the dictionary
     education_info['university_name'] = university_name
     education_info['degree'] = degree
     education_info['date_range'] = date_range
-    education_info['additional_details'] = additional_details
+    education_info['details'] = details
+    education_info['skills'] = skills
     
     # Append the dictionary to the list
     education_list.append(education_info)
