@@ -5,11 +5,11 @@ class Education:
         self.major:str = major
         self.school:str = school
         self.date_range:str = date_range
-        self.skills:List[str] = []
+        self.skills:List[str] = skills
         self.details:str = details
 
     def __str__(self) -> str:
-        pass
+        return f"Major: {self.major}\nSchool: {self.school}\nDate Range: {self.date_range}\nDetails: {self.details}\nSkills: {self.skills}\n"
 
 
         
