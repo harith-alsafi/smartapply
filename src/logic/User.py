@@ -12,15 +12,14 @@ def run_io_tasks_in_parallel(tasks):
             running_task.result()
 
 class User:
-    def __init__(self):
-        self.fetcher:FetcherAccount = FetcherAccount()
+    def __init__(self, account:FetcherAccount):
+        self.fetcher:FetcherAccount = account
         self.education_list:EducationList = None
         self.experience_list:ExperienceList = None
         self.skill_list:SkillList = None
         # self.project_list:ProjectList = None
 
     def parse(self, link:str):
-        self.fetcher.login()
         self.education_list:EducationList = EducationList(link, self.fetcher)
         self.experience_list:ExperienceList = ExperienceList(link, self.fetcher)
         self.skill_list:SkillList = SkillList(link, self.fetcher)
@@ -30,7 +29,6 @@ class User:
         self.experience_list.parse()
         self.skill_list.parse()
         # self.project_list.parse()
-        self.fetcher.logout()
 
     def print(self):
         if self.education_list != None:

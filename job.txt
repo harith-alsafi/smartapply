@@ -1,0 +1,9 @@
+Role=ML Engineer intern
+Company=Ivy
+Location=United Kingdom
+Remote=Remote
+Job_type=Internship · Internship
+Industry=11-50 employees · Software Development
+Details=About the jobDuring The Role, Your Tasks Would IncludeWe are looking for developers to join our team remotely for 3-12 months with flexible start dates. You will help to extend Ivy’s codebase as we expand into the PyTorch Ecosystem and beyond. We are hiring worldwide, no visa required.Helping to design Ivy's graph compiler and transpiler, enabling automatic code conversions between frameworksWorking alongside our open-source partners, helping to incorporate Ivy into their popular repositoriesImplementing SOTA models in Ivy, and adding these to our model hubRequirementsStrong Python skills, with expertise in one of: PyTorch, TensorFlow, JAXStrong skills in recursive programming. Check out the Ivy Container classA passion for Machine Learning research, and for our vision to unify the ML frameworks!
+About Company=None
+
