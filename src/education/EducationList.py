@@ -18,7 +18,7 @@ class EducationList:
     text:str
     def __init__(self, link:str, account:FetcherAccount):
         self.education_list:List[Education] = []
-        self.link:str = link+"details/languages/"
+        self.link:str = link+"details/education/"
         self.account = account
     
     def parse(self):
@@ -28,13 +28,13 @@ class EducationList:
         if self.education_elements == None:
             return
         for element in self.education_elements:
-            university_name = self.get_university_name(element)
-            degree = self.get_degree(element)
+            major = self.get_degree(element)
+            school = self.get_university_name(element)
             date_range = self.get_date_range(element)
             details_skills = self.get_skills_details(element)
             details = details_skills[0]
             skills =  details_skills[1]
-            education = Education(university_name, degree, date_range, details, skills)
+            education = Education(major, school, date_range, details, skills)
             self.education_list.append(education)
 
     def get_university_name(self, element:ResultSet) -> str:
@@ -95,7 +95,6 @@ class EducationList:
                 skill = skill[index+7:]
                 skills = skill.split("\u00b7")
                 skills = [i.strip() for i in skills]
-
         return details, skills
     
     def print(self):

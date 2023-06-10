@@ -9,3 +9,7 @@
     - Interview question 
     - Cover Letter 
     - Cv
+
+- TODO:
+    - finished linkedin projects
+    - finish github projects 

@@ -1,13 +1,376 @@
-https://www.linkedin.com/in/harith-al-safi/details/languages/
-Major: Arabic
-School: Full professional proficiency
-Date Range: Full professional proficiency
-Details: N/A
-Skills: []
+Education: 
+------------------
 
-Major: English
-School: Full professional proficiency
-Date Range: Full professional proficiency
+https://www.linkedin.com/in/harith-al-safi/details/education/
+Major: Bachelor of Engineering - BEng, Electronics and Computer Engineering
+School: University of Leeds
+Date Range: Sep 2020 - Jul 2024
+Details: A hybrid course between Electronics Engineering and Computer Science
+
+Skills: ['Assembly Language', 'Git', 'Digital Electronics', 'Algorithms and Data structure', 'Mathematics', 'Computer Science', 'Field-Programmable Gate Arrays (FPGA)', 'C++', 'Mbed', 'Digital Signal Processing', 'Embedded Systems', 'Bash', 'Qt Creator', 'Hardware Description Language', 'Circuit Design', 'Team Leadership', 'Communication', 'LaTeX', 'Computer Networking', 'Java', 'MATLAB', 'Linux']
+
+Major: Foundation degree, Engineering
+School: University of Leeds
+Date Range: 2019 - 2020
+Details: Grade: 93/100
+We took higher level pure and applied mathematics in addition to CAD designs with automobiles. I also took external courses on python, octave and multivariable calculus.
+
+Skills: ['Mathematics', 'Microsoft Office', 'AutoCAD']
+
+Major: High School Diploma, IB
+School: Cambridge high school
+Date Range: 2017 - 2019
+Details: Grade: 40/42
+Activities and societies: CAS activities in addition to extra math courses
+My subjects were:
+Math Standard Level
+English B Standard Level
+Arabic B Standard Level
+Physics Higher Level
+Chemistry Higher Level
+Economics Standard Level
+
+Skills: ['Mathematics', 'Microsoft Office']
+
+Experience: 
+------------------
+
+https://www.linkedin.com/in/harith-al-safi/details/experience/
+Role: Software Engineer Intern
+Company: Johnson Controls · Internship
+Date Range: Jul 2022 - Present · 1 yr
+Details: 
+Skills: ['C++', 'C#', 'Python (Programming Language)', 'Computer Science', 'Powershell', 'Git', 'Microsoft Office', 'Team Leadership']
+
+Role: Software Programmer
+Company: Royal Holloway, University of London · Freelance
+Date Range: Feb 2023 · 1 mo
+Details: 1EAT
+We provide a web app dashboard to allow companies to view their historical carbon data against their revenue and profit. They can then clearly see what they must do to avoid increasing their carbon credit budget with the help with MATLAB analysis.
+We use Auth0 for credential management to allow both company managers and analysis teams to log in effortlessly.
+We also make use of Twilio to allow users to set up alerts when the tool predicts the company is using too much carbon.
+MATLAB is used in the backend to analyse the large data sets the company provides
+
+Skills: ['Computer Science']
+
+Role: Freelance Software Engineer
+Company: Paperound · Freelance
+Date Range: Nov 2021 - Feb 2022 · 4 mos
+Details: 
+Skills: ['Python (Programming Language)', 'C (Programming Language)', 'Linux', 'Computer Science']
+
+Role: Information Technology Administrator
+Company: Mesopotamia Group · Internship
+Date Range: Jun 2020 - Mar 2021 · 10 mos
+Details: Learning the basics of unix, bash and basic networking protocols. Implementing a local file server on ubuntu 18.04 LTS server edition. The server was implemented using Apache and nextcloud as the file browser.
+
+Skills: ['Python (Programming Language)', 'Linux', 'Computer Science', 'Bash', 'Computer Networking']
+
+Role: Event Coordinator
+Company: CHSMUN · Full-time
+Date Range: Sep 2017 - Nov 2017 · 3 mos
+Details: Organised modern united nation meetings. Formalised professional conclusion reports after each meeting with statistical proof on each claim. Initiated researched debates about global issues. Achieved the best delegate status in the form of well researched debates and reports
+
+Skills: ['Microsoft Office']
+
+Skills: 
+------------------
+
+https://www.linkedin.com/in/harith-al-safi/details/skills/
+Title: C++
+Details: Software Engineer Intern at Johnson Controls
+University of Leeds
+Passed LinkedIn Skill Assessment
+
+
+Title: C#
+Details: Software Engineer Intern at Johnson Controls
+Passed LinkedIn Skill Assessment
+
+
+Title: Python (Programming Language)
+Details: 3 experiences across Johnson Controls and 2 other companies
+Tools for data science
+Python for Data Science, AI & Development
+
+
+Title: C (Programming Language)
+Details: Freelance Software Engineer at Paperound
+Passed LinkedIn Skill Assessment
+1 endorsement
+
+
+Title: Linux
+Details: 2 experiences across Paperound and 1 other company
+University of Leeds
+Passed LinkedIn Skill Assessment
+
+
+Title: Computer Science
+Details: 4 experiences across Johnson Controls and 3 other companies
+University of Leeds
+What is data science?
+
+
+Title: Java
+Details: University of Leeds
+
+
+Title: JavaScript
+Details: Personal portfolio
+Mini Blog with React
+Mario Club Website
+
+
+Title: Dart
 Details: N/A
-Skills: []
+
+Title: Powershell
+Details: Software Engineer Intern at Johnson Controls
+Cross platform math library in c++
+
+
+Title: MATLAB
+Details: University of Leeds
+
+
+Title: Bash
+Details: Information Technology Administrator at Mesopotamia Group
+University of Leeds
+Cross platform math library in c++
+
+
+Title: Cascading Style Sheets (CSS)
+Details: Personal portfolio
+Mini Blog with React
+Mario Club Website
+
+
+Title: HTML5
+Details: Personal portfolio
+Mini Blog with React
+Mario Club Website
+
+
+Title: React.js
+Details: Mini Blog with React
+
+
+Title: Flutter
+Details: N/A
+
+Title: SQL
+Details: Python for Data Science, AI & Development
+Databases and SQL for Data Science with Python
+
+
+Title: Firebase
+Details: N/A
+
+Title: Git
+Details: Software Engineer Intern at Johnson Controls
+University of Leeds
+Passed LinkedIn Skill Assessment
+
+
+Title: Docker
+Details: Cross platform math library in c++
+
+
+Title: Computer Science
+Details: 4 experiences across Johnson Controls and 3 other companies
+University of Leeds
+What is data science?
+
+
+Title: Dart
+Details: N/A
+
+Title: Continuous Integration and Continuous Delivery (CI/CD)
+Details: Cross platform math library in c++
+Personal portfolio
+Mini Blog with React
+
+
+Title: Field-Programmable Gate Arrays (FPGA)
+Details: University of Leeds
+
+
+Title: Digital Signal Processing
+Details: University of Leeds
+Digital signal processing with matlab
+Data analysis and Machine Learning in C++
+
+
+Title: Circuit Design
+Details: University of Leeds
+Simple embedded game and timer
+Embedded system STM32 Home Automation
+
+
+Title: Computer Networking
+Details: Information Technology Administrator at Mesopotamia Group
+University of Leeds
+
+
+Title: Data Analysis
+Details: Databases and SQL for Data Science with Python
+Data Analysis with Python
+
+
+Title: Machine Learning
+Details: Matrix Algebra for Engineers
+Tools for data science
+Python for Data Science, AI & Development
+
+
+Title: Data Science
+Details: Tools for data science
+Databases and SQL for Data Science with Python
+Data Analysis with Python
+
+
+Title: Qt Creator
+Details: University of Leeds
+Media Player GUI
+
+
+Title: Programming
+Details: 1 endorsement
+
+
+Title: Digital Electronics
+Details: University of Leeds
+Simple embedded game and timer
+
+
+Title: Hardware Description Language
+Details: University of Leeds
+
+
+Title: Mathematics
+Details: 3 educational experiences at University of Leeds
+Matrix Algebra for Engineers
+Data Analysis with Python
+
+
+Title: C++
+Details: Software Engineer Intern at Johnson Controls
+University of Leeds
+Passed LinkedIn Skill Assessment
+
+
+Title: C#
+Details: Software Engineer Intern at Johnson Controls
+Passed LinkedIn Skill Assessment
+
+
+Title: Python (Programming Language)
+Details: 3 experiences across Johnson Controls and 2 other companies
+Tools for data science
+Python for Data Science, AI & Development
+
+
+Title: C (Programming Language)
+Details: Freelance Software Engineer at Paperound
+Passed LinkedIn Skill Assessment
+1 endorsement
+
+
+Title: Linux
+Details: 2 experiences across Paperound and 1 other company
+University of Leeds
+Passed LinkedIn Skill Assessment
+
+
+Title: Java
+Details: University of Leeds
+
+
+Title: JavaScript
+Details: Personal portfolio
+Mini Blog with React
+Mario Club Website
+
+
+Title: Powershell
+Details: Software Engineer Intern at Johnson Controls
+Cross platform math library in c++
+
+
+Title: MATLAB
+Details: University of Leeds
+
+
+Title: Bash
+Details: Information Technology Administrator at Mesopotamia Group
+University of Leeds
+Cross platform math library in c++
+
+
+Title: Cascading Style Sheets (CSS)
+Details: Personal portfolio
+Mini Blog with React
+Mario Club Website
+
+
+Title: HTML5
+Details: Personal portfolio
+Mini Blog with React
+Mario Club Website
+
+
+Title: React.js
+Details: Mini Blog with React
+
+
+Title: Flutter
+Details: N/A
+
+Title: SQL
+Details: Python for Data Science, AI & Development
+Databases and SQL for Data Science with Python
+
+
+Title: Firebase
+Details: N/A
+
+Title: Git
+Details: Software Engineer Intern at Johnson Controls
+University of Leeds
+Passed LinkedIn Skill Assessment
+
+
+Title: Docker
+Details: Cross platform math library in c++
+
+
+Title: Embedded Systems
+Details: University of Leeds
+Simple embedded game and timer
+Embedded system STM32 Home Automation
+
+
+Title: Arduino
+Details: N/A
+
+Title: Team Leadership
+Details: Software Engineer Intern at Johnson Controls
+University of Leeds
+Car project Autodesk AutoCAD
+
+
+Title: Communication
+Details: University of Leeds
+1 endorsement
+Media Player GUI
+
+
+Title: English
+Details: 1 endorsement
+
+
+Title: Arabic
+Details: 1 endorsement
+
 
