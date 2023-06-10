@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import time
 
 class FetcherAccount:
     chrome_driver_path:str
@@ -12,7 +13,7 @@ class FetcherAccount:
     password:str
     def __init__(self):
         self.chrome_options = Options()
-        self.chrome_options.add_argument("--headless")
+        # self.chrome_options.add_argument("--headless")
         self.webdriver_path = "assets/drivers/chromedriver"  # Replace with the actual path
         self.driver = webdriver.Chrome(executable_path=self.webdriver_path, options=self.chrome_options)
         self.email = "bombkiller36@gmail.com"
@@ -38,12 +39,13 @@ class FetcherAccount:
         sign_in_button.click()
 
         # Wait for the login process to complete and wait for the dashboard page to load
-        WebDriverWait(self.driver, 10).until(
+        WebDriverWait(self.driver, 30).until(
             EC.presence_of_element_located((By.ID, "ember8"))
         )
 
     def get_html(self, link:str) -> str:
         self.driver.get(link)
+        time.sleep(5)
         return self.driver.page_source
 
     def logout(self):

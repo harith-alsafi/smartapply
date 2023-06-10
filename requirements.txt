@@ -1,5 +1,6 @@
 openai
 streamlit
+streamlit_chat
 beautifulsoup4
 requests
 pylatex
