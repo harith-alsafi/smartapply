@@ -29,8 +29,10 @@ class MainInterface:
         if self.create_interview:
             st.write("Generating Interview Questions...")
 
+
+
     def get_resume(self):
-        with open('assets/resume-template-2.html', 'r') as file:
+        with open('assets/resume-template-1.html', 'r') as file:
             html_string = file.read()
         return html_string
 
@@ -49,28 +51,8 @@ class MainInterface:
             page_title="Smart Apply",
             page_icon="📋",
         )
-        st.header("Smart Apply 📋")
-        page_icon="📋"
-        st.subheader("Generated Resume!")
 
-        toggle_button1 = st.checkbox("Hide Resume")
-        st.empty()
-        if not toggle_button1:
-            #Displays the resume
-            st.markdown(self.get_resume(), unsafe_allow_html=True)
-
-        toggle_button2 = st.checkbox("Hide Cover Letter")
-        st.empty()
-        if not toggle_button2:
-            #Displays the resume
-            st.markdown(self.get_coverletter(), unsafe_allow_html=True)
-
-        toggle_button3 = st.checkbox("Hide Interview Questions")
-        st.empty()
-        if not toggle_button3:
-            #Displays the resume
-            st.markdown(self.get_questions(), unsafe_allow_html=True)
-
+        #array =[0,0,0]
 
 
         with st.sidebar:
@@ -90,6 +72,34 @@ class MainInterface:
 
             if st.button("Generate"):
                 self.check_inputs()
+
+
+        st.header("Smart Apply 📋")
+        page_icon="📋"
+        st.subheader("Generated Resume!")
+
+        if self.create_resume:
+            toggle_button1 = st.checkbox("Hide Resume")
+            st.empty()
+            if not toggle_button1:
+                #Displays the resume
+                st.markdown(self.get_resume(), unsafe_allow_html=True)
+
+
+        if self.create_coverletter:
+            toggle_button2 = st.checkbox("Hide Cover Letter")
+            st.empty()
+            if not toggle_button2:
+                #Displays the resume
+                st.markdown(self.get_coverletter(), unsafe_allow_html=True)
+
+            
+        if self.create_interview:
+            toggle_button3 = st.checkbox("Hide Interview Questions")
+            st.empty()
+            if not toggle_button3:
+                #Displays the resume
+                st.markdown(self.get_questions(), unsafe_allow_html=True)
 
 
 
