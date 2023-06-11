@@ -1,10 +1,28 @@
 import streamlit as st
 from streamlit_chat import message as st_message
 import validators
+from src.logic.JobInfo import JobInfo
+from src.logic.User import User
+from src.logic.FetcherAccount import FetcherAccount
 
 class MainInterface:
-    def __init__(self):
-        pass
+    user:User
+    jobInfo:JobInfo
+    fetcher:FetcherAccount
+    is_called:bool = False
+
+    def __init__(self, api:str):
+        self.api:str = api
+  
+    def start(self):
+        if MainInterface.is_called:
+            return
+        MainInterface.fetcher = FetcherAccount()
+        MainInterface.fetcher.login()
+        MainInterface.jobInfo = JobInfo(self.fetcher)
+        MainInterface.user = User(self.fetcher)
+        MainInterface.is_called = True
+
     def check_inputs(self):
         if not self.create_resume and not self.create_coverletter and not self.create_interview:
             st.write("Please select at least one option")
@@ -18,7 +36,11 @@ class MainInterface:
             elif not validators.url(self.github_linkedin) and not self.github_linkedin =="":
                 st.write("Please enter a valid Github URL")
             else:
-                st.write("Recieving information.....")   
+                st.write("Recieving information.....") 
+                self.user.parse(self.input_linkedin)
+                self.user.print()
+                self.jobInfo.parse(self.input_position)
+                self.jobInfo.print()  
                 self.user_facing()
 
     def user_facing(self):
@@ -29,10 +51,8 @@ class MainInterface:
         if self.create_interview:
             st.write("Generating Interview Questions...")
 
-
-
     def get_resume(self):
-        with open('assets/resume-template-1.html', 'r') as file:
+        with open('assets/resume-template-2.html', 'r') as file:
             html_string = file.read()
         return html_string
 
@@ -83,7 +103,8 @@ class MainInterface:
             st.empty()
             if not toggle_button1:
                 #Displays the resume
-                st.markdown(self.get_resume(), unsafe_allow_html=True)
+                st.components.v1.html(self.get_resume(),height=1100, width=800)
+                # st.markdown(self.get_resume(), unsafe_allow_html=True)
 
 
         if self.create_coverletter:
