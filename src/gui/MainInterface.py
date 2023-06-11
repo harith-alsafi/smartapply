@@ -82,9 +82,6 @@ class MainInterface:
             self.github_linkedin = st.text_input("Place Your Github URL")
             self.existing_resume = st.file_uploader("Upload your existing resume")
 
-
-
-
             st.write("what do you want to generate?")
             self.create_resume = st.checkbox("Create Resume")
             self.create_coverletter = st.checkbox("Create Cover Letter")

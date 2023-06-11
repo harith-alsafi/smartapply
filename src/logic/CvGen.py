@@ -1,12 +1,57 @@
 from src.logic.User import User
 from src.logic.JobInfo import JobInfo
+from src.education.Education import Education
+from typing import List
+from src.skills.Skill import Skill
 
 DOCTYPE:str = """
 <!DOCTYPE html>
 """
 
-STYLE:str = """
-<style>
+SCRIPT:str = """
+<script>
+    $(document).ready(function()
+{
+	
+	$("html").niceScroll({
+		
+		cursorcolor:"#212b37",
+		cursorborder:"5px solid #212b37",
+		cursorborderradius:"0",
+		scrollspeed:65
+	})
+
+	$("ul, div").filter("#scrolls").niceScroll({
+		
+		cursorcolor:"#ff4359",
+		cursorborder:"2px solid #ff4359",
+		cursorborderradius:"0",
+		scrollspeed:65
+	})
+	
+});
+</script>
+
+"""
+
+HEAD:str = """
+<head>
+    <meta charset="UTF-8" />
+    <meta name="" content="" />
+    <title>cv</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/project03.css" />
+    <!--[if it IE 9]>
+    <script src="js/tools/html5shiv.min.js"></script>
+    <[endif]-->
+</head>
+"""
+
+def get_style(image_url:str):
+    return f"""
+    <style>
 @charset "UTF-8";
 
 body {
@@ -121,7 +166,7 @@ body {
   -moz-border-radius: 50%;
   border-radius: 50%;
   background-color: #292929;
-  background-image: url("https://i.imgur.com/HqqH1eZ.jpg");
+  background-image: url("{image_url}");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -980,52 +1025,12 @@ body {
   border-radius: 100px;
 }
 </style>
-"""
+    """
 
-SCRIPT:str = """
-<script>
-$(document).ready(function()
-{
-	
-	$("html").niceScroll({
-		
-		cursorcolor:"#212b37",
-		cursorborder:"5px solid #212b37",
-		cursorborderradius:"0",
-		scrollspeed:65
-	})
-
-	$("ul, div").filter("#scrolls").niceScroll({
-		
-		cursorcolor:"#ff4359",
-		cursorborder:"2px solid #ff4359",
-		cursorborderradius:"0",
-		scrollspeed:65
-	})
-	
-});
-</script>
-"""
-
-HEAD:str = """
-<head>
-    <meta charset="UTF-8" />
-    <meta name="" content="" />
-    <title>cv</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/project03.css" />
-    <!--[if it IE 9]>
-    <script src="js/tools/html5shiv.min.js"></script>
-    <[endif]-->
-</head>
-"""
-
-def get_full(cv_body:str)->str:
+def get_full(style:str, cv_body:str)->str:
     return f"""
     {DOCTYPE}
-    {STYLE}
+    {style}
     {SCRIPT}
     <html>
         {HEAD}
@@ -1048,4 +1053,123 @@ def get_full(cv_body:str)->str:
     </html>
     """
 
+def get_header(name:str, position:str):
+    return f"""
+    <header>
+    <div class="head-top"></div>
+    <div class="head-right"></div>
+    <div class="head-bottom">
+        <div class="margin">
+            <div class="image-left"></div>
+            <div class="words-right">
+                <h3 title="">{name}</h3>
+                <p>{position}</p>
+            </div>
+        </div>
+        <!-- <div class="aesthetic01"></div> -->
+        <!-- <div class="aesthetic02"></div> -->
+        <!-- <div class="aesthetic03"></div> -->
+    </div>
+    </header>
+    """
 
+def get_section(body:str):
+    return f"""
+    <section>
+    <div class="margin">
+    {body}
+    </div>
+    </section>
+    """
+
+def get_education(index:int, education:Education):
+    return f"""
+    <li id="education0{index}">
+        <h3>{education.major}</h3>
+        <p>{education.skills} * {education.date_range}</p>
+        <p>{education.details}</p>
+    </li>
+    """
+
+def get_skill(skill:Skill):
+    return f"""
+    <li>
+        <div class="icons">
+            <i class="fas fa-star"></i>
+        </div>
+        <div class="words">
+            <p>{skill.title}</p>
+        </div>
+    </li>
+    """
+
+def get_skills(skills:List[str]):
+    if len(skills) > 6:
+        skills = skills[0:6]
+    else:
+        missing = 6-len(skills)
+        
+        
+
+
+def get_footer(location:str, email:str, phone:str, facebook:str, twitter:str, google:str):
+    return f"""
+    <div class="loop"></div>
+    <footer>
+        <div class="foot-back"></div>
+        <div class="foot-front"></div>
+        <div class="foot-words">
+            <h3>contact me</h3>
+            <ul>
+                <li id="contact01">
+                    <div class="icons">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="words">
+                        <p title="">{location}</p>
+                    </div>
+                </li>
+                <li id="contact02">
+                    <div class="icons">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="words">
+                        <p maxlength="10">{email}</p>
+                    </div>
+                </li>
+                <li id="contact03">
+                    <div class="icons">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="words">
+                        <p>{phone}</p>
+                    </div>
+                </li>
+                <li id="contact04">
+                    <div class="icons">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class="words">
+                        <p>/{facebook}</p>
+                    </div>
+                </li>
+                <li id="contact05">
+                    <div class="icons">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <div class="words">
+                        <p>{twitter}</p>
+                    </div>
+                </li>
+                <li id="contact06">
+                    <div class="icons">
+                        <i class="fab fa-google-plus-g"></i>
+                    </div>
+                    <div class="words">
+                        <p>{google}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    """
